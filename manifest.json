@@ -1,0 +1,66 @@
+{
+  "manifest_version": 2,
+  "name": "Accessibility",
+  "version": "0.1",
+  "browser_action": {
+    "default_title": "Accessibility adds accessibility features to websites for users.",
+    "default_icon": "./icon48.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "commands.js"
+    ]
+  },"permissions": [
+    "tabs",
+    "tabCapture",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+ ],
+  "commands": {
+    "injectContrast": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Filters the page with high contrast."
+    },
+    "injectGray": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Filters the page with grayscale."
+    },
+    "injectGroovy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Filter the page with hue rotate."
+    },
+    "injectShadow": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Filters the page with drop shadow."
+    }
+  },
+  "icons": {
+    "16": "./icon16.png",
+    "48": "./icon48.png",
+    "128": "./icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "./main.js"
+      ]
+    }
+  ]
+}
