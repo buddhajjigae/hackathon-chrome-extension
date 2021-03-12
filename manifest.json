@@ -3,7 +3,7 @@
   "name": "Accessibility",
   "version": "0.1",
   "browser_action": {
-    "default_title": "Accessibility adds accessibility features to websites for users.",
+    "default_title": "Accessibility adds accessibility features to websites for users by allowing them to filter websites with shortcuts. Available filters are: 1. High Contrast, 2. Grayscale, 3. Hue Rotate, 4. Drop Shadow.",
     "default_icon": "./icon48.png"
   },
   "background": {
